@@ -6,7 +6,7 @@
 			CustomData = { Path = { Map = { ["Setting:"] = "Templates:/Edit/Titles/Fuller/" } }, },
 			Inputs = ordered() {
 				ChapterTitle = InstanceInput {
-					SourceOp = "EpisodeInfo",
+					SourceOp = "ChapterTitle",
 					Source = "ChapterTitle",
 					Page = "Controls",
 				},
@@ -120,7 +120,7 @@
 					ControlGroup = 23,
 				},
 				EpisodeInfo = InstanceInput {
-					SourceOp = "ChapterTitle",
+					SourceOp = "EpisodeInfo",
 					Source = "EpisodeInfo",
 				},
 				Input1 = InstanceInput {
@@ -231,6 +231,119 @@
 					Source = "Underline",
 					Name = "Emphasis",
 					ControlGroup = 11,
+				},
+                				SeriesTitle = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "SeriesTitle",
+				},
+				SeriesTitleInput1 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "StyledText",
+				},
+				SeriesTitleInput2 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "Font",
+					ControlGroup = 112,
+				},
+				SeriesTitleInput3 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "Style",
+					ControlGroup = 112,
+				},
+				SeriesTitleInput4 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 113,
+					Default = 1,
+				},
+				SeriesTitleInput5 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "Green1Clone",
+					ControlGroup = 113,
+					Default = 1,
+				},
+				SeriesTitleInput6 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "Blue1Clone",
+					ControlGroup = 113,
+					Default = 1,
+				},
+				SeriesTitleInput7 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "Alpha1Clone",
+					ControlGroup = 113,
+					Default = 1,
+				},
+				SeriesTitleInput8 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "Size",
+					Default = 0.1535,
+				},
+				SeriesTitleInput9 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "CharacterSpacingClone",
+					Name = "Tracking",
+					Default = 1.134,
+				},
+				SeriesTitleInput10 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "LineSpacingClone",
+					Default = 1,
+				},
+				SeriesTitleInput11 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "VerticalJustificationTop",
+					Name = "V Anchor",
+					ControlGroup = 117,
+				},
+				SeriesTitleInput12 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "VerticalJustificationCenter",
+					ControlGroup = 117,
+				},
+				SeriesTitleInput13 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "VerticalJustificationBottom",
+					ControlGroup = 117,
+				},
+				SeriesTitleInput14 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "VerticalTopCenterBottom",
+					Default = 110,
+				},
+				SeriesTitleInput15 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "HorizontalJustificationLeft",
+					Name = "H Anchor",
+					ControlGroup = 119,
+				},
+				SeriesTitleInput16 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "HorizontalJustificationCenter",
+					ControlGroup = 119,
+				},
+				SeriesTitleInput17 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "HorizontalJustificationRight",
+					ControlGroup = 119,
+				},
+				SeriesTitleInput18 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "HorizontalLeftCenterRight",
+					Default = 110,
+				},
+				SeriesTitleInput19 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "Strikeout",
+					Name = "Emphasis",
+					ControlGroup = 111,
+				},
+				SeriesTitleInput20 = InstanceInput {
+					SourceOp = "SeriesTitle",
+					Source = "Underline",
+					Name = "Emphasis",
+					ControlGroup = 111,
 				}
 			},
 			Outputs = {
@@ -240,7 +353,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { 385, 115.5 },
+				Pos = { 197.333, 41.2879 },
 				Flags = {
 					Expanded = true,
 					AllowPan = false,
@@ -249,49 +362,16 @@
 					AutoSnap = true,
 					RemoveRouters = true
 				},
-				Size = { 696.742, 387.104, 253.371, 24.2424 },
+				Size = { 542.075, 317.407, 133.371, 22.4242 },
 				Direction = "Horizontal",
 				PipeStyle = "Direct",
 				Scale = 1,
 				Offset = { 0, 0 }
 			},
 			Tools = ordered() {
-				EpisodeInfo = TextPlus {
+                ChapterTitle = TextPlus {
 					ExtentSet = true,
-					NameSet = true,
-					Inputs = {
-						GlobalOut = Input { Value = 500, },
-						Width = Input { Value = 3840, },
-						Height = Input { Value = 2160, },
-						UseFrameFormatSettings = Input { Value = 1, },
-						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
-						Center = Input { Value = { 0.940749414519906, 0.0754783343755639 }, },
-						CharacterSpacing = Input { Value = 1.071, },
-						Opacity1 = Input {
-							SourceOp = "EpisodeInfoOpacity1",
-							Source = "Value",
-						},
-						Softness1 = Input { Value = 1, },
-						Rotation1 = Input { Value = 1, },
-						PivotNest1 = Input { Value = 1, },
-						Shear1 = Input { Value = 1, },
-						Size1 = Input { Value = 1, },
-						StyledText = Input { Value = "FULLER CONVERSATIONS: EPISODE #1 STEVE HOWE", },
-						Font = Input { Value = "Kaneda Gothic", },
-						Style = Input { Value = "Regular", },
-						Size = Input { Value = 0.025, },
-						VerticalTopCenterBottom = Input { Value = 1, },
-						VerticalJustificationNew = Input { Value = 3, },
-						HorizontalLeftCenterRight = Input { Value = 1, },
-						HorizontalJustificationNew = Input { Value = 3, },
-						TabSpacing = Input { Value = 1, },
-						AdvancedFontControls = Input { Value = 1, }
-					},
-					ViewInfo = OperatorInfo { Pos = { -55, 144.47 } },
-					UserControls = ordered() { ChapterTitle = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 19, INP_Default = 1, INPID_InputControl = "LabelControl", LINKS_Name = "Chapter Title", } }
-				},
-				ChapterTitle = TextPlus {
-					ExtentSet = true,
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Quality = Input { Value = 6, },
@@ -322,14 +402,85 @@
 						AdvancedFontControls = Input { Value = 1, },
 						EpisodeInfo = Input { Value = 1, }
 					},
-					ViewInfo = OperatorInfo { Pos = { -55, 243.924 } },
-					UserControls = ordered() { EpisodeInfo = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 19, INPID_InputControl = "LabelControl", LINKS_Name = "Episode Info", } }
+					ViewInfo = OperatorInfo { Pos = { 55, 82.5 } },
+                    UserControls = ordered() { ChapterTitle = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 20, INPID_InputControl = "LabelControl", LINKS_Name = "Chapter Title", INP_Default = 1 } }
+				},
+ 				EpisodeInfo = TextPlus {
+					ExtentSet = true,
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 500, },
+						Width = Input { Value = 3840, },
+						Height = Input { Value = 2160, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.940749414519906, 0.0754783343755639 }, },
+						CharacterSpacing = Input { Value = 1.071, },
+						Opacity1 = Input {
+							SourceOp = "EpisodeInfoOpacity1",
+							Source = "Value",
+						},
+						Softness1 = Input { Value = 1, },
+						Rotation1 = Input { Value = 1, },
+						PivotNest1 = Input { Value = 1, },
+						Shear1 = Input { Value = 1, },
+						Size1 = Input { Value = 1, },
+						StyledText = Input { Value = "E1: Steve Howe", },
+						Font = Input { Value = "Kaneda Gothic", },
+						Style = Input { Value = "Regular", },
+						Size = Input { Value = 0.025, },
+						VerticalTopCenterBottom = Input { Value = 1, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalLeftCenterRight = Input { Value = 1, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						TabSpacing = Input { Value = 1, },
+						AdvancedFontControls = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 214.5 } },
+                    UserControls = ordered() { EpisodeInfo = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 20, INPID_InputControl = "LabelControl", LINKS_Name = "Episode Info", INP_Default = 1 } }
+				},
+                SeriesTitle = TextPlus {
+					ExtentSet = true,
+					CtrlWZoom = false,
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						GlobalOut = Input { Value = 500, },
+						Width = Input { Value = 3840, },
+						Height = Input { Value = 2160, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.837749, 0.0754783343755639 }, },
+						CharacterSpacing = Input { Value = 1.071, },
+						Opacity1 = Input {
+							SourceOp = "SeriesTitleOpacity1",
+							Source = "Value",
+						},
+						Softness1 = Input { Value = 1, },
+						Rotation1 = Input { Value = 1, },
+						PivotNest1 = Input { Value = 1, },
+						Shear1 = Input { Value = 1, },
+						Size1 = Input { Value = 1, },
+						StyledText = Input { Value = "FULLER CONVERSATIONS", },
+						Font = Input { Value = "Kaneda Gothic", },
+						Style = Input { Value = "Bold", },
+						Size = Input { Value = 0.025, },
+						VerticalTopCenterBottom = Input { Value = 1, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalLeftCenterRight = Input { Value = 1, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						TabSpacing = Input { Value = 1, },
+						AdvancedFontControls = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 148.5 } },
+					UserControls = ordered() { SeriesTitle = { INP_Integer = false, LBLC_DropDownButton = true, LINKID_DataType = "Number", LBLC_NumInputs = 20, INPID_InputControl = "LabelControl", LINKS_Name = "Series Title", } }
 				},
 				Merge2_1 = Merge {
 					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
-							SourceOp = "Merge1",
+							SourceOp = "Background2",
 							Source = "Output",
 						},
 						Foreground = Input {
@@ -339,28 +490,30 @@
 						PerformDepthMerge = Input { Value = 0, },
 						ReferenceSize = Input { Value = 1, }
 					},
-					ViewInfo = OperatorInfo { Pos = { 183.334, 243.924 } },
+					ViewInfo = OperatorInfo { Pos = { 165, 82.5 } },
 				},
 				Merge1 = Merge {
 					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
-							SourceOp = "Merge2",
+							SourceOp = "Merge2_1",
 							Source = "Output",
 						},
 						Foreground = Input {
-							SourceOp = "Line",
+							SourceOp = "HorizontalLineBG",
 							Source = "Output",
 						},
 						PerformDepthMerge = Input { Value = 0, }
 					},
-					ViewInfo = OperatorInfo { Pos = { 183.334, 197.636 } },
+					ViewInfo = OperatorInfo { Pos = { 165, 115.5 } },
 				},
-				Line = Background {
+				HorizontalLineBG = Background {
+					CtrlWZoom = false,
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						EffectMask = Input {
-							SourceOp = "Polygon1LineMask",
+							SourceOp = "HorizontalLinePoly",
 							Source = "Mask",
 						},
 						GlobalOut = Input { Value = 119, },
@@ -372,17 +525,18 @@
 						TopLeftGreen = Input { Value = 1, },
 						TopLeftBlue = Input { Value = 1, }
 					},
-					ViewInfo = OperatorInfo { Pos = { -55, 197.636 } },
+					ViewInfo = OperatorInfo { Pos = { 55, 115.5 } },
 				},
-				Polygon1LineMask = PolylineMask {
+				HorizontalLinePoly = PolylineMask {
 					DrawMode = "ClickAppend",
 					DrawMode2 = "InsertAndModify",
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
 						BorderWidth = Input { Value = 0.0015, },
 						WritePosition = Input {
-							SourceOp = "Polygon1LineMaskPosition",
+							SourceOp = "HorizontalLinePolyPosition",
 							Source = "Value",
 						},
 						MaskWidth = Input { Value = 3840, },
@@ -393,8 +547,8 @@
 						Polyline = Input {
 							Value = Polyline {
 								Points = {
-									{ Linear = true, X = 0.105469903951329, Y = -0.385478158205431, RX = 0.110929439346557, RY = 0 },
-									{ Linear = true, X = 0.438258221990999, Y = -0.385478158205431, LX = -0.110929439346557, LY = 0 }
+									{ Linear = true, X = 0.105469903951329, Y = -0.385478158205431, RX = 0.11203594003812, RY = 0 },
+									{ Linear = true, X = 0.441577724065688, Y = -0.385478158205431, LX = -0.11203594003812, LY = 0 }
 								}
 							},
 						},
@@ -404,13 +558,13 @@
 							Disabled = true,
 						}
 					},
-					ViewInfo = OperatorInfo { Pos = { -157.667, 197.287 } },
+					ViewInfo = OperatorInfo { Pos = { -55, 115.5 } },
 				},
 				Merge2 = Merge {
 					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
-							SourceOp = "Background2",
+							SourceOp = "Merge1_1",
 							Source = "Output",
 						},
 						Foreground = Input {
@@ -419,7 +573,7 @@
 						},
 						PerformDepthMerge = Input { Value = 0, }
 					},
-					ViewInfo = OperatorInfo { Pos = { 183.667, 144.47 } },
+					ViewInfo = OperatorInfo { Pos = { 165, 214.5 } },
 				},
 				Background2 = Background {
 					CtrlWShown = false,
@@ -445,7 +599,7 @@
 						StartRenderScripts = Input { Value = 1, },
 						EndRenderScripts = Input { Value = 1, }
 					},
-					ViewInfo = OperatorInfo { Pos = { 183.667, 102.379 } },
+					ViewInfo = OperatorInfo { Pos = { 165, 49.5 } },
 				},
 				Rectangle1 = RectangleMask {
 					CtrlWShown = false,
@@ -463,9 +617,10 @@
 						Height = Input { Value = 0.457244655581948, },
 						CornerRadius = Input { Value = 1, }
 					},
-					ViewInfo = OperatorInfo { Pos = { 183.667, 49.5 } },
+					ViewInfo = OperatorInfo { Pos = { 165, 16.5 } },
 				},
 				KeyframeStretcher1_1 = KeyStretcher {
+					CtrlWShown = false,
 					Inputs = {
 						Keyframes = Input {
 							SourceOp = "Merge3",
@@ -475,9 +630,10 @@
 						StretchStart = Input { Value = 35, },
 						StretchEnd = Input { Value = 103, }
 					},
-					ViewInfo = OperatorInfo { Pos = { 330, 313.5 } },
+					ViewInfo = OperatorInfo { Pos = { 330, 247.5 } },
 				},
 				Merge3 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Blend = Input {
 							SourceOp = "Merge3Blend",
@@ -488,14 +644,15 @@
 							Source = "Output",
 						},
 						Foreground = Input {
-							SourceOp = "Merge2_1",
+							SourceOp = "Merge2",
 							Source = "Output",
 						},
 						PerformDepthMerge = Input { Value = 0, }
 					},
-					ViewInfo = OperatorInfo { Pos = { 183.334, 313.5 } },
+					ViewInfo = OperatorInfo { Pos = { 165, 247.5 } },
 				},
 				Background1 = Background {
+					CtrlWShown = false,
 					Inputs = {
 						GlobalOut = Input { Value = 119, },
 						Width = Input { Value = 3840, },
@@ -504,7 +661,93 @@
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						TopLeftAlpha = Input { Value = 0, }
 					},
-					ViewInfo = OperatorInfo { Pos = { 73.334, 313.5 } },
+					ViewInfo = OperatorInfo { Pos = { 55, 247.5 } },
+				},
+				Merge2_2 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "SeriesTitle",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 148.5 } },
+				},
+				Merge1_1 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge2_2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "VerticalLineBG",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 165, 181.5 } },
+				},
+				VerticalLineBG = Background {
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "VerticalLinePoly",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 3840, },
+						Height = Input { Value = 2160, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 181.5 } },
+				},
+				VerticalLinePoly = PolylineMask {
+					ShowHandles = false,
+					DrawMode = "ModifyOnly",
+					DrawMode2 = "InsertAndModify",
+					CtrlWShown = false,
+					NameSet = true,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input { Value = 0.0008, },
+						MaskWidth = Input { Value = 3840, },
+						MaskHeight = Input { Value = 2160, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Value = { 0.849010373443983, 0.0843028515240904 }, },
+						ZRotation = Input {
+							Value = 1080,
+							Expression = "time < 36 and 1080 * ((1 - math.cos(math.pi * time / 36)) / 2) or 1080",
+						},
+						Polyline = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, X = -0.000530096048670867, Y = -0.0130337137609865, RX = 5.94531778153375e-05, RY = 0.00922713864306782 },
+									{ Linear = true, X = -0.000351736515224854, Y = 0.014647702168217, LX = -5.94531778153375e-05, LY = -0.00922713864306782 }
+								}
+							},
+						},
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						},
+						StartRenderScripts = Input { Value = 1, },
+						EndRenderScripts = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -55, 181.5 } },
 				}
 			},
 		},
@@ -534,7 +777,6 @@
 		},
 		Follower1CharacterAngleX = BezierSpline {
 			SplineColor = { Red = 28, Green = 216, Blue = 243 },
-			NameSet = true,
 			KeyFrames = {
 				[18] = { -87.5838926174496, RH = { 20.3333333333333, -87.5838926174496 }, Flags = { Linear = true } },
 				[25] = { 8.89723077821343e-14, LH = { 22.6666666666667, 8.89723077821343e-14 } }
@@ -542,7 +784,6 @@
 		},
 		Follower1Opacity1 = BezierSpline {
 			SplineColor = { Red = 179, Green = 28, Blue = 244 },
-			NameSet = true,
 			KeyFrames = {
 				[18] = { 0, RH = { 18.6666666666667, 0 }, Flags = { Linear = true } },
 				[20] = { 1, LH = { 19.3333333333333, 1 } }
@@ -551,18 +792,18 @@
 		EpisodeInfoOpacity1 = BezierSpline {
 			SplineColor = { Red = 179, Green = 28, Blue = 244 },
 			CtrlWZoom = false,
-			NameSet = true,
 			KeyFrames = {
 				[9] = { 0, RH = { 12, 0.333333333333333 }, Flags = { Linear = true } },
 				[18] = { 1, LH = { 15, 0.666666666666667 }, Flags = { Linear = true } }
 			}
 		},
-		Polygon1LineMaskPosition = BezierSpline {
+		HorizontalLinePolyPosition = BezierSpline {
 			SplineColor = { Red = 237, Green = 132, Blue = 6 },
 			CtrlWZoom = false,
 			KeyFrames = {
 				[9] = { 1, RH = { 17.8, 1 } },
-				[18] = { 0, LH = { 9.4, 0 } }
+				[18] = { 0, LH = { 9.4, 0 }, RH = { 36.3333333333333, 0 } },
+				[73] = { 0, LH = { 54.6666666666667, 0 }, Flags = { Linear = true } }
 			}
 		},
 		Merge3Blend = BezierSpline {
@@ -573,6 +814,14 @@
 				[18] = { 1, LH = { 5.1, 1 }, RH = { 45.6666666666667, 0.998666666666666 } },
 				[101] = { 0.995999999999999, LH = { 73.3333333333333, 0.997333333333333 }, RH = { 120.5, 0.989999999999998 }, Flags = { Linear = true } },
 				[119] = { 0, LH = { 105.5, -0.003 } }
+			}
+		},
+		SeriesTitleOpacity1 = BezierSpline {
+			SplineColor = { Red = 179, Green = 28, Blue = 244 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[9] = { 0, RH = { 12, 0.333333333333333 }, Flags = { Linear = true } },
+				[18] = { 1, LH = { 15, 0.666666666666667 }, Flags = { Linear = true } }
 			}
 		}
 	},
